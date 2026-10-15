@@ -31,7 +31,7 @@ public class payrollCalculator {
 
         //Display the name and the gross pay
         System.out.println("Name: "+ (firstName + " " + lastName));
-        System.out.println("Gross pay: $" + grossPay);
+        System.out.println("Gross pay:  $" + grossPay);
 
     }
 }
