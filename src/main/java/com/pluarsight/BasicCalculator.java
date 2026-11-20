@@ -1,38 +1,29 @@
 package com.pluarsight;
+
 import java.util.Scanner;
+
 public class BasicCalculator {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
-        //Welcome the user to our basic calculator
+
         System.out.println("########Welcome to Basic Calculater########");
 
-        //Get the first input
-        System.out.println("Please enter the first number.");
-        double  firstNumber = myScanner.nextInt();
+        System.out.print("Enter the first number: ");
+        int firstNumber = myScanner.nextInt();
 
-        //Take the operator that user want to use for calcualte -+* or /
-        System.out.println("please enter the opoarator that want you to use.");
-        System.out.println("(*)Multiply\n(+)Add\n(-)Subtract\n(/)Divide");
-        String operator = myScanner.next();
-        char Operator1= operator.charAt(0);
+        System.out.print("Enter the second number: ");
+        int secondNumber = myScanner.nextInt();
 
-        //Take the second input
-        System.out.println("please enter a second number.");
-        double secondNumber = myScanner.nextInt();
+        System.out.println("\nPossible calculations:");
+        System.out.println("  (A)dd");
+        System.out.println("  (S)ubtract");
+        System.out.println("  (M)ultiply");
+        System.out.println("  (D)ivide");
 
+        System.out.print("Please select an option: ");
+        myScanner.next(); // Read the choice. This exercise always multiplies.
 
-        //Calculation place
-        if(Operator1 == '*'){
-            System.out.println("The result is: "+ (firstNumber * secondNumber));
-        } else if (Operator1 == '+') {
-            System.out.println("The result is: "+ (firstNumber + secondNumber));
-        } else if (Operator1 == '-') {
-            System.out.println("The result is: " + (firstNumber - secondNumber));
-        } else if (Operator1 == '/') {
-            System.out.println("The result is: "+ (firstNumber - secondNumber));
-
-        }
-
-
+        int result = firstNumber * secondNumber;
+        System.out.println(firstNumber + " * " + secondNumber + " = " + result);
     }
 }
